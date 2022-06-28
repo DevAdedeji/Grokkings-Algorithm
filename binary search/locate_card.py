@@ -4,9 +4,16 @@ cards = [13,11,10,7,4,3,1,0]
 query = 7
 output = 3
 """
-from turtle import position
 
+from linear_search import locate_card
 
+test = {
+       'input': {
+           'cards': [13,11,10,7,4,3,1,0],
+           'query': 7,
+       } ,
+       'output': 3,
+    }
 tests = [
     {
        'input': {
@@ -73,15 +80,6 @@ tests = [
     },
 ]
 
-# Linear search algorithm
+result = locate_card(test['input']['cards'], test['input']['query'])
 
-def locate_card(cards, query):
-    position = 0
-
-    while True:
-        if(cards[position] == query):
-            return position
-        position += 1
-
-        if position == len(cards):
-            return -1
+print(result == test['output'])
