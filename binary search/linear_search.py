@@ -4,10 +4,10 @@
 def locate_card(cards, query):
     position = 0
 
-    while True:
+    while position < len(cards):
         if(cards[position] == query):
             return position
-        position += 1
+        position += 1  
+    return -1
 
-        if position == len(cards):
-            return -1
+        

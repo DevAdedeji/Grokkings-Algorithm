@@ -4,16 +4,9 @@ cards = [13,11,10,7,4,3,1,0]
 query = 7
 output = 3
 """
-
 from linear_search import locate_card
 
-test = {
-       'input': {
-           'cards': [13,11,10,7,4,3,1,0],
-           'query': 7,
-       } ,
-       'output': 3,
-    }
+
 tests = [
     {
        'input': {
@@ -80,6 +73,6 @@ tests = [
     },
 ]
 
-result = locate_card(test['input']['cards'], test['input']['query'])
 
-print(result == test['output'])
+for test in tests:
+    print(locate_card(**test['input']) == test['output'])
