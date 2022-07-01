@@ -9,5 +9,3 @@ def locate_card(cards, query):
             return position
         position += 1  
     return -1
-
-        

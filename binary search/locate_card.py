@@ -5,6 +5,7 @@ query = 7
 output = 3
 """
 from linear_search import locate_card
+from binary_search import binary_search
 
 
 tests = [
@@ -75,4 +76,4 @@ tests = [
 
 
 for test in tests:
-    print(locate_card(**test['input']) == test['output'])
+    print(binary_search(**test['input']) == test['output'])
